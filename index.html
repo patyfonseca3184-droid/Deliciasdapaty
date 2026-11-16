@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delícias da Paty · Bolos e Doces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pk:#e5559f;--mg:#a6256f;--bg:#fff3f9;--card:#fff;--ink:#3a1628;--mute:#7d5a6c;--wine:#2a0e1d;--line:#f3cfe3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0b15;--card:#2c1220;--ink:#fbe9f3;--mute:#d0a6bd;--line:#4a2036}}
+:root[data-theme="dark"]{--bg:#1d0b15;--card:#2c1220;--ink:#fbe9f3;--mute:#d0a6bd;--line:#4a2036}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.hero{background:radial-gradient(circle at 50% 30%,#6a1c48 0,var(--wine) 70%);color:#fff3f9;text-align:center;padding:44px 20px 70px;position:relative;overflow:hidden}
+.logo{width:92px;height:92px;border-radius:50%;background:linear-gradient(145deg,#f06cb8,#d1368d);display:grid;place-items:center;margin:0 auto 14px;box-shadow:0 0 0 4px rgba(255,255,255,.18),0 10px 30px rgba(229,85,159,.5);font-family:'Playfair Display',serif;font-weight:700;line-height:1;font-size:19px;animation:pulse 3.2s ease-in-out infinite}
+.logo small{display:block;font-size:11px;font-style:italic;font-weight:500}
+@keyframes pulse{50%{box-shadow:0 0 0 12px rgba(255,255,255,.05),0 10px 40px rgba(229,85,159,.7)}}
+.hero h1{font-size:clamp(30px,8vw,46px);line-height:1.12;margin:8px 0 10px}
+.hero h1 em{color:#ff9fd0;font-style:italic}
+.hero p{max-width:440px;margin:0 auto 22px;color:#f1cfe2}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 15px Poppins,sans-serif;padding:14px 26px;border-radius:99px;color:#fff;text-decoration:none;background:linear-gradient(135deg,var(--pk),var(--mg));box-shadow:0 8px 22px rgba(166,37,111,.4);position:relative;overflow:hidden;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.35);transform:skewX(-20deg);animation:shine 3.5s infinite}
+@keyframes shine{60%,100%{left:130%}}
+.btn.wa{background:linear-gradient(135deg,#2fc35f,#128c4a);box-shadow:0 8px 22px rgba(18,140,74,.4)}
+.btn.ghost{background:transparent;border:1.5px solid #ff9fd0;box-shadow:none;margin-left:8px}
+.cake{width:min(300px,78vw);margin:10px auto 0;display:block;animation:bob 5s ease-in-out infinite;filter:drop-shadow(0 20px 24px rgba(0,0,0,.45))}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.spr{position:absolute;width:8px;height:18px;border-radius:6px;opacity:.7;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-30px) rotate(0)}to{transform:translateY(620px) rotate(360deg)}}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:40px;display:block}
+section{padding:54px 0 10px}
+.eyebrow{color:var(--pk);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+h2{font-size:clamp(26px,6.5vw,36px);margin:6px 0 12px;line-height:1.15}
+.mq{overflow:hidden;background:var(--mg);color:#ffe3f1;padding:11px 0;white-space:nowrap;font-weight:500;font-size:13px;letter-spacing:.08em}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.about{display:grid;gap:18px}
+.about p{color:var(--mute);margin:0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center;font-size:12.5px;color:var(--mute)}
+.fact b{display:block;font:700 22px 'Playfair Display',serif;color:var(--mg);margin-bottom:2px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gal figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 6px 8px;text-align:center;font-size:12px;color:var(--mute);transition:transform .3s}
+.gal figure:hover{transform:translateY(-6px) rotate(-1deg)}
+.gal svg{width:100%;height:auto}
+.tabs{display:flex;gap:8px;margin:14px 0;overflow-x:auto}
+.tab{flex:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:99px;font:500 14px Poppins,sans-serif;cursor:pointer}
+.tab.on{background:linear-gradient(135deg,var(--pk),var(--mg));color:#fff;border-color:transparent}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(166,37,111,.08)}
+.price{font-weight:600;color:var(--mg)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:7px 12px;font:400 13px Poppins,sans-serif;cursor:pointer;transition:.2s}
+.chip.on{background:var(--pk);border-color:var(--pk);color:#fff;transform:scale(1.04)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row span small{display:block;color:var(--mute);font-size:12px}
+.step{display:flex;align-items:center;gap:10px;flex:none}
+.step button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--pk);background:transparent;color:var(--pk);font-size:18px;cursor:pointer}
+.step b{min-width:46px;text-align:center;font-weight:600}
+.note{font-size:12.5px;color:var(--mute);margin:8px 0 0}
+input,select{width:100%;padding:12px 14px;margin:6px 0;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:400 15px Poppins,sans-serif}
+.tot{display:flex;justify-content:space-between;font:700 22px 'Playfair Display',serif;margin:14px 0}
+.rm{background:none;border:0;color:var(--mg);cursor:pointer;font-size:13px;text-decoration:underline}
+footer{text-align:center;padding:40px 20px 110px;color:var(--mute);font-size:13px}
+.bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--wine);color:#fff;border-radius:99px;padding:10px 12px 10px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:translateY(140%);transition:.4s;z-index:20;max-width:680px;margin:0 auto}
+.bar.on{transform:none}
+.bar .btn{padding:10px 18px;font-size:14px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.hero{background:linear-gradient(120deg,#2a0e1d,#6a1c48,#a6256f,#4a1233,#2a0e1d);background-size:300% 300%;animation:gshift 14s ease infinite}
+@keyframes gshift{50%{background-position:100% 50%}}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+.hero>:not(.wave):not(.spr){position:relative;z-index:1}
+.hero::before,.hero::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;pointer-events:none;background:radial-gradient(rgba(229,85,159,.4),transparent 70%);animation:drift 9s ease-in-out infinite alternate}
+.hero::before{left:-90px;top:-70px}.hero::after{right:-100px;bottom:20px;animation-delay:-4s}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.25)}}
+.hero h1{animation:rise 1s both .15s}.hero p{animation:rise 1s both .35s}.hero .btn{animation:rise 1s both .55s}
+.gal figure svg{animation:bob 4s ease-in-out infinite}.gal figure:nth-child(2) svg{animation-delay:-1.3s}.gal figure:nth-child(3) svg{animation-delay:-2.6s}
+h2::after{content:"";display:block;width:0;height:3px;margin-top:8px;border-radius:3px;background:linear-gradient(90deg,var(--pk),var(--mg));transition:width 1s .3s}.rv.in h2::after{width:64px}
+.chip:hover{border-color:var(--pk);transform:translateY(-2px)}.chip.on{animation:pop .3s}
+@keyframes pop{50%{transform:scale(1.18)}}
+.tab{transition:.25s}.tab:hover{transform:translateY(-2px)}
+.gt{width:100%;font:600 12px Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mg);margin-top:8px}
+.fact{transition:transform .3s}.fact:hover{transform:translateY(-5px)}
+.bar.on{animation:bn 2.4s ease-in-out infinite 1s}@keyframes bn{50%{transform:translateY(-4px)}}
+.bp{position:fixed;z-index:50;pointer-events:none;font-size:20px;animation:bp .9s ease-out forwards}@keyframes bp{to{transform:translate(var(--x),var(--y)) rotate(200deg);opacity:0}}
+textarea{width:100%;padding:12px 14px;margin:6px 0;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:400 15px Poppins,sans-serif;resize:vertical}
+.up{display:block;border:2px dashed var(--pk);border-radius:14px;padding:16px;text-align:center;color:var(--mg);font-weight:500;cursor:pointer;margin:6px 0;transition:.25s}.up:hover{background:rgba(229,85,159,.1);transform:translateY(-2px)}
+#prevs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}#prevs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;animation:pop .4s}
+.pays{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.pay{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 8px;text-align:center;font-weight:600;font-size:14px;transition:transform .3s}.pay:hover{transform:translateY(-6px)}.pay span{display:block;font-size:26px;margin-bottom:4px}.pay small{display:block;font-weight:400;font-size:11.5px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="logo"><div>Delícias<small>da</small>Paty</div></div>
+  <h1>Bolos que você vê e <em>já sente o sabor</em></h1>
+  <p>Bolos e doces feitos sob encomenda em Marília-SP, com recheio generoso e acabamento de confeitaria.</p>
+  <a class="btn" href="#cardapio">Montar meu pedido</a><a class="btn ghost" href="#sobre">Conhecer a Paty</a>
+  <svg class="cake" viewBox="0 0 300 260" aria-label="Bolo decorado com cerejas">
+    <ellipse cx="150" cy="232" rx="130" ry="20" fill="#fff" opacity=".9"/>
+    <ellipse cx="150" cy="228" rx="130" ry="18" fill="#f3d3e4"/>
+    <path d="M50 120v88c0 14 45 24 100 24s100-10 100-24v-88z" fill="#fff8f2"/>
+    <path d="M50 120v88c0 14 45 24 100 24s100-10 100-24v-88z" fill="url(#sh)"/>
+    <g fill="#d3202f"><circle cx="62" cy="214" r="9"/><circle cx="84" cy="224" r="9"/><circle cx="108" cy="230" r="9"/><circle cx="134" cy="233" r="9"/><circle cx="160" cy="233" r="9"/><circle cx="186" cy="230" r="9"/><circle cx="212" cy="224" r="9"/><circle cx="236" cy="214" r="9"/></g>
+    <ellipse cx="150" cy="120" rx="100" ry="30" fill="#fff8f2"/>
+    <ellipse cx="150" cy="120" rx="100" ry="30" fill="none" stroke="#f58cc0" stroke-width="12" stroke-dasharray="14 6"/>
+    <ellipse cx="150" cy="120" rx="82" ry="22" fill="none" stroke="#d3202f" stroke-width="7" stroke-dasharray="10 5"/>
+    <g fill="#d3202f"><path d="M118 168c-6 12 4 16 8 8 4-6 0-10-8-8zm14 14c-6 12 4 16 8 8 4-6 0-10-8-8z" transform="translate(10 -10)"/></g>
+    <g stroke="#2d6a2f" stroke-width="2" fill="none"><path d="M150 110c8-8 16-4 24-2"/></g>
+    <g><path d="M104 96c-4-30 4-54 12-64" stroke="#7a1420" stroke-width="2.5" fill="none"/><circle cx="104" cy="100" r="15" fill="#c8101f"/><circle cx="99" cy="95" r="4" fill="#fff" opacity=".6"/></g>
+    <g><path d="M196 92c4-26-2-46-6-58" stroke="#7a1420" stroke-width="2.5" fill="none"/><circle cx="198" cy="96" r="15" fill="#c8101f"/><circle cx="193" cy="91" r="4" fill="#fff" opacity=".6"/></g>
+    <g><path d="M150 82c-1-22-6-38-10-46" stroke="#7a1420" stroke-width="2.5" fill="none"/><circle cx="150" cy="88" r="15" fill="#c8101f"/><circle cx="145" cy="83" r="4" fill="#fff" opacity=".6"/></g>
+    <path d="M150 150l-18-8v16zm0 0l18-8v16z" fill="#e5559f"/><circle cx="150" cy="150" r="5" fill="#c93a86"/>
+    <defs><linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".14"/></linearGradient></defs>
+  </svg>
+  <svg class="wave" viewBox="0 0 400 40" preserveAspectRatio="none"><path d="M0 40V20c40-22 80 18 130 4s80-22 130-4 90 14 140-6v26z" fill="#a6256f"/></svg>
+</header>
+<div class="mq"><div id="mq"></div></div>
+
+<main class="wrap">
+<section id="sobre" class="about rv">
+  <div><div class="eyebrow">Quem faz</div><h2>Feito por quem ama <em style="color:var(--pk)">confeitar</em></h2></div>
+  <p>A Delícias da Paty é a confeitaria da Paty em Marília-SP. Cada bolo e cada doce sai da cozinha dela por encomenda: massa macia, recheio de verdade e decoração pensada para a sua festa.</p>
+  <p>Do beijinho e brigadeiro de sempre aos gourmet com nutella e ouro branco, o cardápio foi montado para agradar da mesa de aniversário ao cafezinho de domingo.</p>
+  <div class="facts"><div class="fact"><b class="cnt">33</b>sabores de bolo</div><div class="fact"><b class="cnt">11</b>tipos de docinho</div><div class="fact"><b class="cnt">2</b>sabores por bolo</div></div>
+</section>
+
+<section class="rv">
+  <div class="eyebrow">Um gostinho</div><h2>Bolos para cada comemoração</h2>
+  <div class="gal">
+    <figure><svg viewBox="0 0 120 120"><ellipse cx="60" cy="104" rx="50" ry="8" fill="#f3d3e4"/><path d="M20 52v46c0 6 18 10 40 10s40-4 40-10V52z" fill="#fff8f2"/><ellipse cx="60" cy="52" rx="40" ry="12" fill="#fff8f2" stroke="#f58cc0" stroke-width="6" stroke-dasharray="7 3"/><path d="M60 40c-1-14-4-20-6-24" stroke="#7a1420" stroke-width="1.5" fill="none"/><circle cx="60" cy="42" r="8" fill="#c8101f"/><g fill="#d3202f"><circle cx="30" cy="96" r="4"/><circle cx="46" cy="102" r="4"/><circle cx="64" cy="104" r="4"/><circle cx="80" cy="102" r="4"/><circle cx="92" cy="96" r="4"/></g></svg>Cerejas</figure>
+    <figure><svg viewBox="0 0 120 120"><ellipse cx="60" cy="104" rx="50" ry="8" fill="#f3d3e4"/><path d="M20 48v50c0 6 18 10 40 10s40-4 40-10V48z" fill="#7a4026"/><path d="M20 48c4 14 8 4 12 18s6 2 10 12 6 0 10-12 6 8 10-6 8 6 12-4 6 8 10-8 6 6 8-10V48z" fill="#3b1a10"/><ellipse cx="60" cy="48" rx="40" ry="12" fill="#a0613d"/><path d="M38 46c8-8 12 4 20-4s14 6 24-2" stroke="#d9a074" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="60" cy="40" r="7" fill="#c8101f"/></svg>Chocolate trufado</figure>
+    <figure><svg viewBox="0 0 120 120"><ellipse cx="60" cy="104" rx="50" ry="8" fill="#f3d3e4"/><path d="M26 56v42c0 6 15 10 34 10s34-4 34-10V56z" fill="#f4c6dc"/><ellipse cx="60" cy="56" rx="34" ry="10" fill="#f4c6dc" stroke="#fff3e6" stroke-width="6" stroke-dasharray="6 3"/><path d="M60 82l-14-8v14zm0 0l14-8v14z" fill="#e5559f"/><circle cx="60" cy="82" r="4" fill="#c93a86"/></svg>Laço rosé</figure>
+  </div>
+  <p class="note">Ilustrações de apresentação. Cada bolo é decorado sob medida para o seu pedido.</p>
+</section>
+
+<section id="cardapio" class="rv">
+  <div class="eyebrow">Cardápio</div><h2>Escolha e peça pelo WhatsApp</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="box" id="cakeBox">
+    <div class="price" id="cakePrice"></div>
+    <div class="chips" id="chips"></div>
+    <div class="row"><span>Peso do bolo<small id="kgHint"></small></span><div class="step"><button id="kgm">−</button><b id="kgv">1 kg</b><button id="kgp">+</button></div></div>
+    <div class="gt">Massa do bolo</div><select id="massa"><option>Massa branca</option><option>Massa de chocolate</option></select><div class="gt">Decoração</div><select id="dec"><option value="">Sem decoração</option><option value="s">Decoração tema personalizado · + R$ 20,00</option></select><input id="tema" placeholder="Qual o tema?" style="display:none"><button class="btn" id="addCake" style="width:100%;margin-top:6px">Adicionar bolo ao pedido</button>
+    <p class="note" id="cakeNote">Até 2 sabores. Pode misturar um tradicional e um gourmet.</p>
+  </div>
+  <div class="box" id="docBox" style="display:none"></div>
+</section>
+
+<section id="pedido" class="rv">
+  <div class="eyebrow">Seu pedido</div><h2>Revise e envie</h2>
+  <div class="box">
+    <div id="list"><p class="note">Seu pedido está vazio. Escolha acima o que vai levar para a mesa.</p></div>
+    <div class="tot"><span>Total estimado</span><span id="tot">R$ 0,00</span></div>
+    <input id="nome" placeholder="Seu nome" autocomplete="name">
+    <input id="data" placeholder="Data desejada (ex.: 25/12)">
+    <select id="ent"><option>Retirada no local</option><option>Entrega</option></select><input id="end" placeholder="Endereço completo para entrega (rua, número, bairro)" style="display:none"><p class="note" id="entNote" style="display:none">A entrega tem taxa, que varia conforme o endereço, e depende da disponibilidade de entregador. A Paty confirma o valor e se é possível pelo WhatsApp.</p>
+    <input id="obs" placeholder="Tema, nome, recado no bolo..."><div class="gt">Foto de inspiração</div><select id="foto"><option value="">Não vou enviar foto de inspiração</option><option value="s">Vou enviar foto de inspiração pelo WhatsApp</option></select><textarea id="refd" style="display:none" rows="3" placeholder="O que você quer igual ou diferente da foto? (cores, decoração, tamanho...)"></textarea><p class="note" id="refN" style="display:none">Depois de enviar o pedido, anexe a foto de inspiração na conversa com a Paty (pelo clipe ou pela galeria).</p><div class="gt">Forma de pagamento</div><select id="pay"><option>Pix</option><option>Cartão (com taxa da maquininha)</option><option>Dinheiro</option></select>
+    <a class="btn wa" id="send" target="_blank" rel="noopener" href="https://wa.me/5514996672420" style="display:block;text-align:center;width:100%;margin-top:10px">Enviar pedido no WhatsApp</a>
+    <button class="rm" id="cp" type="button" style="display:block;margin:10px auto 0">Se o WhatsApp abrir sem a mensagem, toque para copiar o pedido</button><p class="note">O valor é uma estimativa. A Paty confirma preço final, prazo e disponibilidade pelo WhatsApp. Aceitamos cartões, com taxa da maquininha.</p>
+  </div>
+</section>
+<section class="rv"><div class="eyebrow">Pagamento</div><h2>Formas de pagamento</h2><div class="pays"><div class="pay"><span>◆</span>Pix</div><div class="pay"><span>💳</span>Cartão<small>com taxa da maquininha</small></div><div class="pay"><span>💵</span>Dinheiro</div></div></section>
+</main>
+
+<footer>
+  <b>Delícias da Paty</b><br>Rua Francisco José de Oliveira, 186 · Nova Almeida · Marília-SP<br>
+  <a href="https://wa.me/5514996672420" style="color:var(--pk)">(14) 99667-2420</a> · <a href="https://instagram.com/del.iciasdapaty" style="color:var(--pk)">@del.iciasdapaty</a>
+</footer>
+<div class="bar" id="bar"><span id="barTxt"></span><a class="btn" href="#pedido">Ver pedido</a></div>
+
+<script>
+var WA='5514996672420';
+var T=['Beijinho','Bicho de pé','Brigadeiro branco','Brigadeiro branco com morango','Brigadeiro ao leite','Brigadeiro ao leite com morango','Brigadeiro de maracujá','Brigadeiro de ninho','Cocada com abacaxi','Cocada com ameixa','Creme belga','Creme belga com abacaxi','Creme belga com morango','Doce de leite','Doce de leite com abacaxi','Doce de leite com ameixa','Doce de leite com morango','Maracujá com chocolate ao leite picado','Ninho com abacaxi','Ninho com bombom','Ninho com morango','Ninho com pedaços de chocolate'];
+var G=['Beijinho trufado','Creme belga com nozes','Doce de leite com nozes','Maracujá trufado','Mousse de alpino','Mousse de chocolate','Mousse de ninho','Mousse de ninho com morango','Mousse de ninho com ouro branco','Ninho trufado','Ninho trufado com creme de avelã (Nutella)'];
+var D=[{n:'Doces tradicionais',p:115,l:['Beijinho','Bicho de pé','Brigadeiro','Casadinho','Prestígio','Ninho']},{n:'Doces gourmet',p:135,l:['Churros','Ninho com nutella','Romeu e Julieta']},{n:'Doces especiais',p:145,l:['Ferrero Rocher','Olhos verdes']}];
+var kind='b',sel=[],kg=1,items=[],dq={},MIN={'Olhos verdes':50};
+var $=function(i){return document.getElementById(i)};
+var money=function(v){return 'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})};
+var isG=function(f){return f.some(function(s){return G.indexOf(s)>-1})};var perKg=function(i){return !isG(i.f)&&i.w>2?65:70};var decV=function(i){return i.d==='s'?20:0};var decT=function(i){return i.m+' · '+(i.d==='s'?'Decoração tema personalizado'+(i.t?' ('+i.t+')':'')+' (+R$ 20,00)':'Sem decoração')};var cakeV=function(i){return perKg(i)*i.w+decV(i)};
+$('mq').innerHTML=Array(2).fill(T.concat(G).slice(0,14).join(' ✦ ')+' ✦ ').join('');
+var tabs=[['b','Bolos'],['d','Doces']];
+function drawTabs(){$('tabs').innerHTML=tabs.map(function(t){return '<button class="tab'+(kind===t[0]?' on':'')+'" data-k="'+t[0]+'">'+t[1]+'</button>'}).join('');
+ [].forEach.call($('tabs').children,function(b){b.onclick=function(){kind=b.dataset.k;sel=[];drawTabs();drawCake()}})}
+function drawCake(){var d=kind==='d';$('cakeBox').style.display=d?'none':'block';$('docBox').style.display=d?'block':'none';
+ if(d){drawDocs();return}
+ $('cakePrice').textContent='Tradicionais R$ 70,00/kg (acima de 2 kg, R$ 65,00/kg) · Gourmet R$ 70,00/kg';
+ $('kgHint').textContent='Com algum sabor gourmet, o quilo é R$ 70';
+ var chip=function(s){return '<button class="chip'+(sel.indexOf(s)>-1?' on':'')+'">'+s+'</button>'};$('chips').innerHTML='<div class="gt">Tradicionais</div>'+T.map(chip).join('')+'<div class="gt">Gourmet</div>'+G.map(chip).join('');
+ [].forEach.call($('chips').querySelectorAll('.chip'),function(c){c.onclick=function(){var s=c.textContent,i=sel.indexOf(s);if(i>-1)sel.splice(i,1);else{if(sel.length>=2){$('cakeNote').textContent='Máximo de 2 sabores por bolo.';return}sel.push(s)}$('cakeNote').textContent=sel.length?sel.join(' + '):'Escolha até 2 sabores.';drawCake()}})}
+function drawDocs(){$('docBox').innerHTML=D.map(function(g){return '<div class="price">'+g.n+' · '+money(g.p)+' o cento</div>'+g.l.map(function(n){var q=dq[n]||0;return '<div class="row"><span>'+n+'<small>'+(q?q+' unidades · '+money(q*g.p/100):'a partir de '+(MIN[n]||25)+' unidades')+'</small></span><div class="step"><button data-n="'+n+'" data-d="-25">−</button><b>'+q+'</b><button data-n="'+n+'" data-d="25">+</button></div></div>'}).join('')}).join('')+'<p class="note">Vendidos por cento. Ajuste de 25 em 25 unidades. Olhos verdes: mínimo de 50 unidades.</p>';
+ [].forEach.call($('docBox').querySelectorAll('.step button'),function(b){b.onclick=function(){var n=b.dataset.n;var c=dq[n]||0,mn=MIN[n]||25;dq[n]=Number(b.dataset.d)>0?(c?c+25:mn):(c-25<mn?0:c-25);drawDocs();render()}})}
+$('kgm').onclick=function(){kg=Math.max(1,kg-.5);$('kgv').textContent=kg+' kg'};
+$('kgp').onclick=function(){kg=Math.min(20,kg+.5);$('kgv').textContent=kg+' kg'};
+$('addCake').onclick=function(){if(!sel.length){$('cakeNote').textContent='Escolha pelo menos 1 sabor.';return}
+ items.push({f:sel.slice(),w:kg,m:$('massa').value,d:$('dec').value,t:$('tema').value.trim()});burst();sel=[];$('cakeNote').textContent='Bolo adicionado ao pedido.';drawCake();render()};
+function price(){var t=0;items.forEach(function(i){t+=cakeV(i)});D.forEach(function(g){g.l.forEach(function(n){t+=(dq[n]||0)*g.p/100})});return t}
+function render(){var h='';items.forEach(function(i,x){h+='<div class="row"><span>Bolo · '+i.w+' kg<small>'+i.f.join(' + ')+'<br>'+decT(i)+'</small></span><span>'+money(cakeV(i))+'<br><button class="rm" data-x="'+x+'">remover</button></span></div>'});
+ D.forEach(function(g){g.l.forEach(function(n){if(dq[n])h+='<div class="row"><span>'+n+'<small>'+dq[n]+' unidades</small></span><span>'+money(dq[n]*g.p/100)+'</span></div>'})});
+ $('list').innerHTML=h||'<p class="note">Seu pedido está vazio. Escolha acima o que vai levar para a mesa.</p>';
+ [].forEach.call($('list').querySelectorAll('.rm'),function(b){b.onclick=function(){items.splice(b.dataset.x,1);render()}});
+ var t=price();$('tot').textContent=money(t)+($('ent').value==='Entrega'?' + taxa de entrega':'');$('barTxt').textContent='Total '+money(t);$('bar').classList.toggle('on',t>0);upd()}
+function mk(){
+ var m=['Olá, Paty! Gostaria de fazer um pedido ✨',''];
+ items.forEach(function(i){m.push('• Bolo '+i.w+' kg: '+i.f.join(' + ')+' ('+money(perKg(i)*i.w)+') · '+decT(i))});
+ D.forEach(function(g){g.l.forEach(function(n){if(dq[n])m.push('• '+n+': '+dq[n]+' unidades ('+money(dq[n]*g.p/100)+')')})});
+ m.push('','Total estimado: '+money(price()));
+ if($('nome').value)m.push('Nome: '+$('nome').value);
+ if($('data').value)m.push('Data desejada: '+$('data').value);
+ m.push('Modalidade: '+$('ent').value);if($('ent').value==='Entrega'){m.push('Endereço para entrega: '+($('end').value||'(a informar)'));m.push('Por favor, confirme a taxa de entrega e a disponibilidade.')}
+ if($('obs').value)m.push('Observações: '+$('obs').value);m.push('Pagamento: '+$('pay').value);var rd=refs.length?$('refd').value.trim():'';if(refs.length||rd){m.push('Referência: '+(refs.length?'vou enviar foto de inspiração aqui na conversa em seguida. ':'')+(rd?'Detalhes: '+rd:''))}
+ MSG=m.join('\n');return 'https://api.whatsapp.com/send?phone='+WA+'&text='+encodeURIComponent(MSG)}
+var MSG='';function upd(){if(price()>0)$('send').href=mk()}
+$('send').onclick=function(e){if(price()<=0){e.preventDefault();$('list').innerHTML='<p class="note">Adicione ao menos um item antes de enviar.</p>';return}this.href=mk()};
+// sprinkles
+var hero=document.getElementById('top'),cs=['#ff9fd0','#fff3f9','#e5559f','#ffd1e8'];
+for(var i=0;i<16;i++){var s=document.createElement('i');s.className='spr';s.style.cssText='left:'+Math.random()*100+'%;background:'+cs[i%4]+';animation-duration:'+(7+Math.random()*7)+'s;animation-delay:-'+Math.random()*10+'s';hero.appendChild(s)}
+// reveal
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(r){io.observe(r)})}else rv.forEach(function(r){r.classList.add('in')});
+$('dec').onchange=function(){$('tema').style.display=this.value==='s'?'block':'none'};['nome','data','ent','obs','end','refd','pay'].forEach(function(id){$(id).addEventListener('input',upd);$(id).addEventListener('change',upd)});$('ent').addEventListener('change',function(){var d=this.value==='Entrega';$('end').style.display=d?'block':'none';$('entNote').style.display=d?'block':'none';render()});$('cp').onclick=function(){if(price()<=0)return;mk();var ta=document.createElement('textarea');ta.value=MSG;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();$('cp').textContent='Pedido copiado! Cole na conversa do WhatsApp.'};
+function burst(){var b=$('addCake'),r=b.getBoundingClientRect(),em=['✨','🍒','💖','🍰'];for(var i=0;i<14;i++){var s=document.createElement('i');s.className='bp';s.textContent=em[i%4];s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top+r.height/2)+'px';s.style.setProperty('--x',(Math.random()*240-120)+'px');s.style.setProperty('--y',(-Math.random()*170-30)+'px');document.body.appendChild(s);setTimeout(function(e){e.remove()}.bind(null,s),950)}}
+document.querySelectorAll('.cnt').forEach(function(el){var n=+el.textContent;if(!('IntersectionObserver' in window))return;el.textContent='0';new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1200);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(t0)}}).observe(el)});
+var refs=[];$('foto').onchange=function(){var y=this.value==='s';refs=y?[1]:[];$('refd').style.display=y?'block':'none';$('refN').style.display=y?'block':'none';upd()};var _old=function(){refs=[].slice.call(this.files,0,5);$('prevs').innerHTML='';refs.forEach(function(f){var r=new FileReader();r.onload=function(){var im=document.createElement('img');im.src=r.result;im.alt='Referência';$('prevs').appendChild(im)};r.readAsDataURL(f)});$('upT').textContent=refs.length?'✅ '+refs.length+' foto(s) selecionada(s). Toque para trocar':'📷 Escolher fotos do bolo desejado';$('refN').style.display=refs.length?'block':'none';upd()};
+drawTabs();drawCake();render();
+</script>
+</body>
+</html>
